@@ -21,18 +21,18 @@ https://youtu.be/7-oHuMfVjQM
 ### Mobile robot
 #### Install [SLAM and Navigation Package](http://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/#install-dependent-ros-packages)
 ```bash
-$ sudo apt-get install ros-kinetic-move-base
-$ sudo apt-get install ros-kinetic-gmapping
+$ sudo apt-get install ros-noetic-move-base
+$ sudo apt-get install ros-noetic-gmapping
 ```
  If you include the packages about navigation-kinetic-devel, you don't need you install below components
 ```bash
-$ sudo apt-get install ros-kinetic-amcl
-$ sudo apt-get install ros-kinetic-rosserial-python
-$ sudo apt-get install ros-kinetic-map-server
-$ sudo apt-get install ros-kinetic-range-sensor-layer
-$ sudo apt-get install ros-kinetic-global-planner
-$ sudo apt-get install ros-kinetic-dwa-local-planner
-$ sudo apt-get install ros-kinetic-sensor-msgs
+$ sudo apt-get install ros-noetic-amcl
+$ sudo apt-get install ros-noetic-rosserial-python
+$ sudo apt-get install ros-noetic-map-server
+$ sudo apt-get install ros-noetic-range-sensor-layer
+$ sudo apt-get install ros-noetic-global-planner
+$ sudo apt-get install ros-noetic-dwa-local-planner
+$ sudo apt-get install ros-noetic-sensor-msgs
 ```
  If you have errors about turtlebot3_msgs, download the package.
 ```bash
