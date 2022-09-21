@@ -11,11 +11,6 @@ https://youtu.be/7-oHuMfVjQM
 - #### RPlidar_ros : http://wiki.ros.org/rplidar
 - #### Turtlebot3 : http://wiki.ros.org/turtlebot3
 - #### Navigation tuning : http://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/#tuning-guide
-### Manipulator
-- #### MoveIt : https://moveit.ros.org/
-- #### Realsense : http://wiki.ros.org/RealSense
-- #### Realsense in Jetson TX2 : https://www.jetsonhacks.com/2017/08/14/intel-realsense-camera-librealsense-nvidia-jetson-tx-dev-kits/
-- #### Find_object : http://wiki.ros.org/find_object_2d
 
 ## Requirements
 ### Mobile robot
@@ -39,20 +34,10 @@ $ sudo apt-get install ros-noetic-sensor-msgs
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 ```
-### Manipulator
-#### Install [Moveit](https://moveit.ros.org/install/)
+ Install ros1_bridge(for operate with Nav2 stack)
 ```bash
-$ sudo apt-get install ros-kinetic-moveit
+$ sudo apt-get install ros-foxy-ros1-bridge
 ```
-#### Install [Realsense SDK 2.0](https://github.com/BeomSol/servingbot_ros/tree/master/serving_arm/realsense_ros)
- This robot used librealsense v2.10.3 and realsense_ros 2.0.4.
-#### Set object image folder location
- Modify the objects folder path of find_object_3d_D415.launch
-```bash
-<param name="objects_path" value="~/Pictures/objects" type="str"/>
-```
-### Application
- Download [App](https://github.com/BeomSol/rosjava_catkin_package_a)
 
 ## Setup for embedded PC 
 ### Time synchronization
