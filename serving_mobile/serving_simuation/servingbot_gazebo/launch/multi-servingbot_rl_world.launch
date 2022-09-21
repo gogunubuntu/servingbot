@@ -6,26 +6,26 @@
   <arg name="r1_roll" default="0.0"/>
   <arg name="r1_pitch" default="0.0"/>
   <arg name="r1_yaw" default="0.0"/>
-  
+
   <arg name="r2_x_pos" default="0.0"/>
   <arg name="r2_y_pos" default="-2.0"/>
   <arg name="r2_z_pos" default="0.0"/>
   <arg name="r2_roll" default="0.0"/>
   <arg name="r2_pitch" default="0.0"/>
   <arg name="r2_yaw" default="0.0"/>
-  
+
   <arg name="r3_x_pos" default="0.0"/>
   <arg name="r3_y_pos" default="2.0"/>
   <arg name="r3_z_pos" default="0.0"/>
   <arg name="r3_roll" default="0.0"/>
   <arg name="r3_pitch" default="0.0"/>
   <arg name="r3_yaw" default="0.0"/>
-  
-  <arg name="robot1"  default="robot_0"/>
-  <arg name="robot2" default="robot_1"/>
-  <arg name="robot3"  default="robot_2"/>
 
-  <arg name="map"  default="empty" doc="opt: empty"/> 
+  <arg name="robot1" default="robot_0"/>
+  <arg name="robot2" default="robot_1"/>
+  <arg name="robot3" default="robot_2"/>
+
+  <arg name="map" default="empty" doc="opt: empty"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" default="$(find servingbot_gazebo)/models/temp_world.world" if="$(eval map == 'empty')" />

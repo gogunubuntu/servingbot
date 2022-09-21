@@ -1824,7 +1824,7 @@
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
-      
+
       <model name='unit_cylinder_4'>
         <pose frame=''>19.6378 -8.57293 0.499993 -3e-06 -4e-06 -0</pose>
         <scale>1 1 1</scale>
@@ -1849,7 +1849,7 @@
         <pose frame=''>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    
+
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose frame=''>17.7856 -0.316407 31.9687 2e-06 1.5578 1.59623</pose>

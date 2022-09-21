@@ -4,8 +4,9 @@
   <arg name="z_pos" default="0.0"/>
   <arg name="roll" default="0.0"/>
   <arg name="pitch" default="0.0"/>
-  <arg name="yaw" default="-1.5701"/>
+  <arg name="yaw" default="0.0"/>
   <arg name="map" default="empty" doc="opt: empty"/>
+  <arg name="multi_robot_name" default=""/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find servingbot_gazebo)/models/temp_world.world" if="$(eval map == 'empty')" />
@@ -16,6 +17,12 @@
     <arg name="debug" value="false"/>
   </include>
 
+  <include file="$(find servingbot_bringup)/launch/includes/description.launch.xml">
+  </include>
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value="$(arg multi_robot_name)"/>
+  </node>
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(find servingbot_description)/urdf/servingbot_rl.urdf.xacro" />
 
 

@@ -8,6 +8,7 @@
   <arg name="yaw" default="0.0"/>
   <arg name="yaw_sq" default="-1.5701"/>
   <arg name="map" default="sq" doc="opt: sq,i, small_s, big_s, xl_s"/>
+  <arg name="multi_robot_name" default=""/>
 
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -22,7 +23,13 @@
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
+  <include file="$(find servingbot_bringup)/launch/includes/description.launch.xml">
+  </include>
 
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value="$(arg multi_robot_name)"/>
+  </node>
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(find servingbot_description)/urdf/servingbot_rl.urdf.xacro" />
 
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model servingbot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw) -param robot_description" if="$(eval map != 'sq')"/>
