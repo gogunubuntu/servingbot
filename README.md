@@ -117,32 +117,3 @@ $ roslaunch servingbot_navigation servingbot_navigation.launch
 ```bash
 $ rosrun simple_navigation_goals_pose simple_navigation_goals_pose
 ```
-### Run only Manipulator
-- #### Bringup
- Excute the robot
-```bash
-$ roslaunch servingbot_bringup servingbot_core.launch
-```
-- #### MoveIt
- Direct control of the Manipulator with Rviz
-```bash
-$ roslaunch manipulator_moveit_config_second demo.launch
-```
-### Etc
-- #### Excute realsense device
-```bash
-$ roslaunch realsense2_camera rs_camera.launch
-```
-- #### Excute find objects
- Excute only find objects
-```bash
-$ roslaunch find_object_2d find_object_3d.launch
-```
- Excute find objects with D415
-```bash
-$ roslaunch find_object_2d find_object_3d_D415.launch
-```
-- #### Communication between Mobile robot and Manipulator
-```bash
-$ roslaunch serving_bot serving_bot.launch
-```
