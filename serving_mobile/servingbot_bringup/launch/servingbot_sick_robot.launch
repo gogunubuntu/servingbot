@@ -5,6 +5,7 @@
     <arg name="multi_robot_name" value="$(arg multi_robot_name)"/>
   </include>
   <include file="$(find servingbot_bringup)/launch/servingbot_lidar_sick561.launch"/>
+  <include file="$(find servingbot_bringup)/launch/servingbot_remote.launch"/>
 
   <node pkg="servingbot_bringup" type="servingbot_diagnostics" name="servingbot_diagnostics" output="screen"/>
 </launch>

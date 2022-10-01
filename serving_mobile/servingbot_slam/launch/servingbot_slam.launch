@@ -5,8 +5,8 @@
   <arg name="open_rviz" default="true"/>
 
   <!-- Servingbot -->
-  <include file="$(find servingbot_bringup)/launch/servingbot_remote.launch">
-  </include>
+  <!-- <include file="$(find servingbot_bringup)/launch/servingbot_remote.launch">
+  </include>-->
 
   <!-- SLAM: Gmapping, Cartographer, Hector, Karto, Frontier_exploration, RTAB-Map -->
   <include file="$(find servingbot_slam)/launch/servingbot_sick_gmapping.launch">
