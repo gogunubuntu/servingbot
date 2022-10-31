@@ -2,7 +2,7 @@
   <!-- Arguments -->
   <!--param name="slam_methods" value="gmapping"/-->
   <arg name="configuration_basename" default="servingbot_rplidar.lua"/>
-  <arg name="open_rviz" default="true"/>
+  <arg name="open_rviz" default="false"/>
 
   <!-- Servingbot -->
   <!-- <include file="$(find servingbot_bringup)/launch/servingbot_remote.launch">
@@ -15,9 +15,7 @@
   </include>
 
   <!-- rviz -->
-  <group if="$(arg open_rviz)"> 
-    <node pkg="rviz" type="rviz" name="rviz" required="true"
-          args="-d $(find servingbot_slam)/rviz/servingbot_gmapping.rviz"/>
-
+  <group if="$(arg open_rviz)">
+    <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find servingbot_slam)/rviz/servingbot_gmapping.rviz"/>
   </group>
 </launch>
