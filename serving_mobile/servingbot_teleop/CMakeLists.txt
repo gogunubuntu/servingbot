@@ -10,6 +10,7 @@ project(servingbot_teleop)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   geometry_msgs
+  nav_msgs
 )
 
 ################################################################################
@@ -41,6 +42,7 @@ catkin_package(
 ################################################################################
 catkin_install_python(PROGRAMS
   nodes/servingbot_teleop_key
+  nodes/calc_dynamics
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

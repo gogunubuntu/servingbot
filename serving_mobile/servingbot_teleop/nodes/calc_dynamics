@@ -1,0 +1,24 @@
+import rospy
+import time
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
+
+def callback(data):
+    print(data.twist.twist.linear.x)
+
+if __name__=="__main__":
+
+    sub = rospy.Subscriber('odom', Odometry, callback)
+    pub = rospy.Publisher('cmd_vel', Twist)
+    rospy.init_node('calc_dynamics')
+    start, end = Twist(), Twist()
+    start.linear.x = 1.0
+    start.angular.z = 0.0
+
+    end.linear.x = 0.0
+    end.angular.z = 0.0
+
+    pub.publish(start)
+    time.sleep(2.0)
+    pub.publish(end)
+    time.sleep(2.0)
